@@ -22,7 +22,7 @@ public class When2MeetTask {
         //Create a Event
         WebElement eventNameInput = driver.findElement(By.xpath("//input[@id='NewEventName']"));
         eventNameInput.clear();
-        eventNameInput.sendKeys("My Test Event");
+        eventNameInput.sendKeys("My Test");
 
         //Select start & end Date
 
@@ -55,13 +55,20 @@ public class When2MeetTask {
         signInButton.click();
 
 
-        //Time slot between 10 -> 11 AM
-            WebElement availabilityStartTime = driver.findElement(By.xpath("//div[@id='YouTime1718424000']"));
+        //Time slot between 10 -> 11 AM   
+            WebElement availabilityStartTime = driver.findElement(By.xpath("//div[@id='YouTime1719028800']"));
             wait.until(ExpectedConditions.elementToBeClickable(availabilityStartTime));
             availabilityStartTime.click();
-            WebElement availabilityEndTime = driver.findElement(By.xpath("//div[@id='YouTime1718426700']"));
+            WebElement availabilityEndTime = driver.findElement(By.xpath("//div[@id='YouTime1719032400']"));
             wait.until(ExpectedConditions.elementToBeClickable(availabilityEndTime));
             availabilityEndTime.click();
+
+            WebElement availabilityStartTime1 = driver.findElement(By.xpath("//div[@id='YouTime1719460800']"));
+            wait.until(ExpectedConditions.elementToBeClickable(availabilityStartTime1));
+            availabilityStartTime1.click();
+            WebElement availabilityEndTime1 = driver.findElement(By.xpath("//div[@id='YouTime1719464400']"));
+            wait.until(ExpectedConditions.elementToBeClickable(availabilityEndTime1));
+            availabilityEndTime1.click();
 
         driver.close();
     }
